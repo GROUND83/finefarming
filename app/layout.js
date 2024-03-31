@@ -2,7 +2,7 @@ import { Inter, Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata = {
   title: "Create Next App",
@@ -14,6 +14,7 @@ const notoSansKr = Noto_Sans_KR({
   subsets: ["latin"], // 또는 preload: false
   weight: ["100", "400", "700", "900"], // 가변 폰트가 아닌 경우, 사용할 fontWeight 배열
   variable: "--font-sans",
+  display: "swap",
 });
 
 export default function RootLayout({ children }) {

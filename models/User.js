@@ -1,0 +1,38 @@
+import mongoose from "mongoose";
+
+const User = mongoose.Schema(
+  {
+    email: {
+      type: String,
+      unique: true,
+    }, // 이메일
+    userName: {
+      type: String,
+      required: true,
+    }, // 이름
+    gender: {
+      type: String,
+    }, // 성별
+    birthDate: {
+      type: Date,
+    }, // 생년월일
+    phone: {
+      type: String,
+    }, // 연락처
+    joinDate: {
+      type: Date,
+    }, // 가입일
+    lastLoginDate: {
+      type: Date,
+    }, // 마지막 로그인
+    usingNumner: {
+      type: Number,
+    }, // 이용횟수
+    canclePercent: {
+      type: Number,
+    }, // 이용횟수
+  },
+  { timestamps: true }
+);
+
+export default mongoose.models.User || mongoose.model("User", User);
